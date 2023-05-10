@@ -8,4 +8,4 @@ Bequen records and archival center for record keeping. This is a commercial webs
 
 ### Author
 
-This website was authored by [Joel Nambala](https://joelnambala.netlify.app). Click the link to check out my portfolio
+This website was authored by <a target="_blank">[Joel Nambala](https://joelnambala.netlify.app)</a>. Click the link to check out my portfolio
