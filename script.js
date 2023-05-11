@@ -1,11 +1,14 @@
 'use strict';
 
 // Select DOM elements
+const copyYear = document.querySelector('.copy-year');
 
 // Functions
-const fixedNavigation = function () {
-  const scrollHeight = window.scrollY;
-  console.log(scrollHeight);
-};
+const changeCopyrightYear = function () {
+  // Get the present year
+  const today = new Date().getFullYear();
 
-window.addEventListener('scroll', fixedNavigation);
+  // Update the UI
+  copyYear.textContent = today;
+};
+changeCopyrightYear();
