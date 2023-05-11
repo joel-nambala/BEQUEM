@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:root {
+  --primary-color: #be123c;
+  --primary-color-light: #e11d48;
+  --primary-color-dark: #9f1239;
+  --text-color: #444;
+  --bg-primary: #f3f4f6;
+  --bg-secondary: #d1d5db;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +21,107 @@ html {
 }
 
 body {
-  background-color: #f7f7f7;
-  font-family: sans-serif;
+  background-color: var(--bg-primary);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+/* HEADER */
+.header-container {
+  max-width: 130rem;
+  padding: 0 4rem;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-item {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  border-bottom: 3px transparent var(--primary-color);
+  transition: all 0.1s ease-in;
+  letter-spacing: 1px;
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid var(--primary-color);
+}
+
+/* FOOTER */
+.footer {
+  background-color: #57534e;
+  color: #fff;
+}
+
+.footer-container {
+  max-width: 130rem;
+  padding: 3rem 4rem;
+  margin: 0 auto;
+}
+
+.footer-header {
+  font-size: 2.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-item {
+  font-size: 1.4rem;
+}
+
+.footer-social {
+  margin-top: 0.8rem;
+}
+
+.footer-social a {
+  color: #fff;
+}
+
+.footer-social a:not(:last-child) {
+  margin-right: 1.4rem;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #78716c;
+  padding: 2rem 0;
+  gap: 0.8rem;
+  font-size: 1.4rem;
 }

@@ -5,6 +5,7 @@ Bequem records and archival center for record keeping. This is a commercial webs
 <li>HTML</li>
 <li>CSS</li>
 <li>JavaScript</li>
+<li>Modern technologies like CSS Grid and Flexbox</li>
 
 ### Author
 

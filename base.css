@@ -1,0 +1,48 @@
+/* GLOBAL STYLES */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 0.8rem 1.6rem;
+  font-size: 1.6rem;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-light);
+}
+
+/* GRID system */
+.row {
+  display: grid;
+}
+
+.col-1 {
+  grid-template-columns: 1fr;
+}
+
+.col-2 {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.col-4 {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+}
+
+.col-5 {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4rem;
+}
+
+.col-6 {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4rem;
+}
