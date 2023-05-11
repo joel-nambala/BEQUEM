@@ -132,7 +132,80 @@
     <section id="services"></section>
     <section id="news"></section>
     <div class="contact hide-modal"></div>
-    <form class="contact-form hide-modal"></form>
+    <form class="contact-form hide-modal">
+      <h2 class="contact-header">Contact us</h2>
+      <div class="row col-sm">
+        <div class="contact-group">
+          <input
+            type="text"
+            placeholder="First Name"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="contact-group">
+          <input
+            type="text"
+            placeholder="Last Name"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="contact-group">
+          <input
+            type="email"
+            placeholder="Email Name"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="contact-group">
+          <input
+            type="number"
+            placeholder="Phone Number"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="contact-group">
+          <input
+            type="text"
+            placeholder="Company"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="contact-group">
+          <select name="location" id="location" class="form-control" required>
+            <option value="">---Select location---</option>
+            <option value="kenya">Kenya</option>
+            <option value="uganda">Uganda</option>
+            <option value="tanzania">Tanzania</option>
+            <option value="burundi">Burundi</option>
+            <option value="zanzibar">Zanzibar</option>
+          </select>
+        </div>
+        <div class="contact-group">
+          <input
+            type="text"
+            placeholder="Subject"
+            class="form-control"
+            required
+          />
+        </div>
+      </div>
+      <div class="contact-group" style="margin-top: 2rem">
+        <textarea
+          name="textarea"
+          id="textarea"
+          class="form-control"
+          rows="8"
+          placeholder="Type your message here..."
+          required
+        ></textarea>
+      </div>
+      <input type="submit" value="send" class="btn btn-contact" />
+    </form>
   </body>
   <footer class="footer">
     <div class="footer-container row col-4">

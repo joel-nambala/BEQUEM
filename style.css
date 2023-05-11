@@ -91,6 +91,10 @@ body {
   text-transform: uppercase;
 }
 
+.about-card {
+  position: relative;
+}
+
 .about-card:not(:last-child) {
   margin-bottom: 4rem;
 }
@@ -98,14 +102,6 @@ body {
 .about-img img {
   width: 100%;
   display: block;
-}
-
-.about-img img::after {
-  content: '';
-  width: 100rem;
-  height: 4rem;
-  display: inline-block;
-  background-color: #be123c;
 }
 
 .about-text h3 {
@@ -208,10 +204,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 3rem;
-  height: 5rem;
-  background-color: orangered;
-  width: 60vw;
+  background-color: #fff;
+  max-width: 90vw;
   z-index: 200;
+  padding: 1rem 2rem;
+  border-radius: 0.6rem;
 }
 
 .hide-modal {
@@ -225,4 +222,25 @@ body {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+}
+
+.contact-header {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+
+.form-control {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  background-color: #eee;
+  outline: none;
+}
+
+.btn-contact {
+  margin-top: 2rem;
 }
