@@ -72,6 +72,9 @@ body {
   border-left-color: none;
   font-size: 2.4rem;
   display: none;
+  position: fixed;
+  top: 2rem;
+  right: 2.6rem;
 }
 
 /* ABOUT */
