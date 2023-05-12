@@ -16,4 +16,16 @@
   .nav-respond {
     display: block;
   }
+
+  .links-container {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .links-container {
+    height: auto !important;
+  }
 }

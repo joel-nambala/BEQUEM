@@ -1,0 +1,15 @@
+{
+  "name": "bequen",
+  "version": "1.0.0",
+  "description": "Bequem records and archival center for record keeping. This is a commercial website for a record keeping company and it was created with the following technologies",
+  "main": "script.js",
+  "scripts": {
+    "server": "live-server --port=8090"
+  },
+  "author": "Joel Nambala",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "node-sass": "^8.0.0"
+  }
+}
