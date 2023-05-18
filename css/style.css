@@ -181,6 +181,7 @@ body {
 
 .news-tag {
   color: var(--primary-color);
+  text-transform: capitalize;
 }
 
 .news-button {

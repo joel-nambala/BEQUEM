@@ -11,6 +11,42 @@ const navList = document.querySelector('.nav-list');
 const nav = document.querySelector('.nav');
 const scrollLink = document.querySelectorAll('.scroll-link');
 const closeModal = document.querySelector('.close-modal');
+const locationContainer = document.querySelector('#location');
+
+// Get all countries in the world
+const searchCountries = async function () {
+  try {
+    // Get the countries data from an API
+    const response = await fetch('https://restcountries.com/v3.1/all');
+
+    // Throw an exception
+    if (!response.ok) throw new Error('Failed to fetch countries');
+
+    // Conert the data to a json string
+    const data = await response.json();
+
+    // Initialize the locations array
+    const locations = [].sort();
+
+    // Loop over the countries data and push the names to the location array
+    data.forEach(function (country, i, arr) {
+      locations.push(country.name.common);
+    });
+
+    // Loop over the locations array with the country names
+    locations.forEach(function (locale, i, arr) {
+      // Generate markup
+      const html = `<option value="${locale}">${locale}</option>`;
+
+      // Append to the UI
+      locationContainer.insertAdjacentHTML('beforeend', html);
+    });
+  } catch (error) {
+    // Display an error message
+    console.error(error.message);
+  }
+};
+searchCountries();
 
 // Change copyright year
 const changeCopyrightYear = function () {
