@@ -22,10 +22,58 @@
     overflow: hidden;
     transition: all 0.3s ease;
   }
+
+  .col-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .col-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .col-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media only screen and (min-width: 769px) {
   .links-container {
     height: auto !important;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  html {
+    font-size: 58%;
+  }
+
+  .about-card-2,
+  .about-card-4 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .about-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .col-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .col-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .col-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .col-5 {
+    grid-template-columns: 1fr;
+  }
+
+  .col-6 {
+    grid-template-columns: 1fr;
   }
 }

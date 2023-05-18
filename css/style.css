@@ -17,7 +17,6 @@
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -29,17 +28,11 @@ body {
 }
 
 /* HEADER */
-.header-container {
-  max-width: 130rem;
-  padding: 0 4rem;
-  margin: 0 auto;
-}
-
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 4rem;
 }
 
 .nav-list {
