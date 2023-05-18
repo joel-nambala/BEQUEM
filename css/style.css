@@ -78,15 +78,6 @@ body {
   margin: 4rem 0;
 }
 
-.about-header {
-  font-size: 2.6rem;
-  margin-bottom: 4rem;
-  text-align: center;
-  color: var(--primary-color);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
 .about-card {
   position: relative;
 }
@@ -121,6 +112,18 @@ body {
 .about-text p {
   font-size: 1.6rem;
   line-height: 1.6;
+}
+
+/* SERVICES */
+#services {
+  background-color: #fff;
+  padding: 4rem 0;
+}
+
+/* NEWS */
+#news {
+  background-color: #9f1239;
+  padding: 4rem 0;
 }
 
 /* FOOTER */
@@ -188,7 +191,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   backdrop-filter: blur(6px);
   z-index: 100;
@@ -199,9 +202,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin: 3rem;
   background-color: #fff;
-  max-width: 90vw;
+  width: 60vw;
   z-index: 200;
   padding: 1rem 2rem;
   border-radius: 0.6rem;
@@ -239,4 +241,11 @@ body {
 
 .btn-contact {
   margin-top: 2rem;
+}
+
+.close-modal {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.8rem;
 }

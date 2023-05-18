@@ -18,8 +18,17 @@
 
 .container {
   max-width: 114rem;
-  padding: 0 4rem;
+  padding: 0 2rem;
   margin: 0 auto;
+}
+
+.secondary-heading {
+  font-size: 2.6rem;
+  text-align: center;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
 }
 
 .fixed {

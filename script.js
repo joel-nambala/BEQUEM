@@ -10,6 +10,7 @@ const linksContainer = document.querySelector('.links-container');
 const navList = document.querySelector('.nav-list');
 const nav = document.querySelector('.nav');
 const scrollLink = document.querySelectorAll('.scroll-link');
+const closeModal = document.querySelector('.close-modal');
 
 // Change copyright year
 const changeCopyrightYear = function () {
@@ -26,6 +27,7 @@ const showModal = function (e) {
   e.preventDefault();
   contactModal.classList.add('show-modal');
   contactFormModal.classList.add('show-modal');
+  linksContainer.style.height = 0;
 };
 
 // Hide modal
@@ -39,6 +41,7 @@ btnModal.forEach(function (btn, i, arr) {
 });
 
 contactModal.addEventListener('click', hideModal);
+closeModal.addEventListener('click', hideModal);
 
 // Responsive navigation bar
 const responsiveNavigation = function () {
