@@ -207,6 +207,7 @@ body {
   z-index: 200;
   padding: 1rem 2rem;
   border-radius: 0.6rem;
+  box-shadow: 0 0 1rem #555;
 }
 
 .hide-modal {
