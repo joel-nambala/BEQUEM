@@ -26,12 +26,15 @@ const searchCountries = async function () {
     const data = await response.json();
 
     // Initialize the locations array
-    const locations = [].sort();
+    const locations = [];
 
     // Loop over the countries data and push the names to the location array
     data.forEach(function (country, i, arr) {
       locations.push(country.name.common);
     });
+
+    // Sort the locations alphabetically
+    locations.sort();
 
     // Loop over the locations array with the country names
     locations.forEach(function (locale, i, arr) {
