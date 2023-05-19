@@ -31,6 +31,24 @@
   margin-bottom: 4rem;
 }
 
+.tertiary-heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.tertiary-heading::before {
+  content: "";
+  width: 3rem;
+  height: 2rem;
+  display: inline-block;
+  background-color: var(--primary-color);
+  margin-right: 1rem;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
 .fixed {
   width: 100%;
   position: fixed;

@@ -66,8 +66,12 @@ body {
   font-size: 2.4rem;
   display: none;
   position: fixed;
-  top: 2rem;
+  top: 1.1rem;
   right: 2.6rem;
+}
+
+.slider-item img {
+  width: 100%;
 }
 
 /* ABOUT */
@@ -91,24 +95,6 @@ body {
   display: block;
 }
 
-.about-text h3 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: var(--primary-color);
-  margin-bottom: 2rem;
-}
-
-.about-text h3::before {
-  content: "";
-  width: 3rem;
-  height: 2rem;
-  display: inline-block;
-  background-color: var(--primary-color);
-  margin-right: 1rem;
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-}
-
 .about-text p {
   font-size: 1.6rem;
   line-height: 1.6;
@@ -122,6 +108,34 @@ body {
 #services {
   background-color: #fff;
   padding: 4rem 0;
+}
+
+.service-img {
+  width: 100%;
+}
+
+.service-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
+}
+
+.service-header {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.service-list {
+  margin-bottom: 0.8rem;
+  margin-left: 4rem;
+}
+
+.service-item {
+  font-size: 1.4rem;
+}
+
+.service-item:not(:last-child) {
+  margin-bottom: 0.4rem;
 }
 
 /* NEWS */

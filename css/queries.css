@@ -69,6 +69,11 @@
     font-size: 2rem;
   }
 
+  .service-card-2 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   .col-2 {
     grid-template-columns: 1fr;
   }
