@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
 
 :root {
   --primary-color: #be123c;
@@ -21,7 +21,7 @@ html {
 
 body {
   background-color: var(--bg-primary);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--text-color);
   font-weight: 400;
   position: relative;
@@ -100,7 +100,7 @@ body {
 }
 
 .about-text h3::before {
-  content: '';
+  content: "";
   width: 3rem;
   height: 2rem;
   display: inline-block;
@@ -112,6 +112,10 @@ body {
 .about-text p {
   font-size: 1.6rem;
   line-height: 1.6;
+}
+
+.about-icon {
+  margin-left: 0.4rem;
 }
 
 /* SERVICES */
