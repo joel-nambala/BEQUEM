@@ -12,6 +12,8 @@ const nav = document.querySelector('.nav');
 const scrollLink = document.querySelectorAll('.scroll-link');
 const closeModal = document.querySelector('.close-modal');
 const locationContainer = document.querySelector('#location');
+const slides = document.querySelectorAll('.slide');
+const dotContainer = document.querySelector('.dots');
 
 // Get all countries in the world
 const searchCountries = async function () {
@@ -142,3 +144,80 @@ scrollLink.forEach(function (link, i, arr) {
     linksContainer.style.height = 0;
   });
 });
+
+// Slider component
+const sliderComponent = function () {
+  let currentSlide = 0;
+  const maxSlide = slides.length;
+
+  // Create dots
+  const createDots = function () {
+    slides.forEach(function (_, i, arr) {
+      const html = `<button class="dots-dot" data-slide="${i}"></button>`;
+      dotContainer.insertAdjacentHTML('beforeend', html);
+    });
+  };
+
+  // Activate dots
+  const activateDot = function (slide) {
+    document.querySelectorAll(`.dots-dot`).forEach(function (dot) {
+      dot.classList.remove('dots-dot--active');
+    });
+
+    document
+      .querySelector(`.dots-dot[data-slide="${slide}"]`)
+      .classList.add('dots-dot--active');
+  };
+
+  // Go to a slide
+  const goToSlide = function (slide) {
+    slides.forEach(function (s, i, arr) {
+      s.style.transform = `translateX(${(i - slide) * 100}%)`;
+    });
+  };
+
+  // Next slide
+  const nextSlide = function () {
+    if (currentSlide === maxSlide - 1) currentSlide = 0;
+    else currentSlide++;
+
+    goToSlide(currentSlide);
+    activateDot(currentSlide);
+  };
+
+  // Previous slide
+  const prevSlide = function () {
+    if (currentSlide === 0) currentSlide = maxSlide - 1;
+    else currentSlide--;
+
+    goToSlide(currentSlide);
+    activateDot(currentSlide);
+  };
+
+  // Init function
+  const slidesInit = function () {
+    createDots();
+    activateDot(0);
+    goToSlide(0);
+  };
+
+  slidesInit();
+
+  // Event handlers
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') nextSlide();
+    if (e.key === 'ArrowLeft') prevSlide();
+  });
+
+  dotContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('dots-dot')) {
+      const { slide } = e.target.dataset;
+      goToSlide(slide);
+      activateDot(slide);
+    }
+  });
+
+  setInterval(nextSlide, 8000);
+};
+
+sliderComponent();

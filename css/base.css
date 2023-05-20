@@ -1,3 +1,8 @@
+::selection {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
 /* GLOBAL STYLES */
 .btn {
   display: inline-block;
@@ -58,6 +63,10 @@
   z-index: 10;
   padding: 2rem 4rem;
   box-shadow: 0 0 1rem #555;
+}
+
+.chevron-icon {
+  margin-left: 0.4rem;
 }
 
 /* GRID system */

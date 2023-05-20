@@ -70,11 +70,34 @@ body {
   right: 2.6rem;
 }
 
-.slider-item img {
-  width: 100%;
+.hero {
+  background-image: linear-gradient(
+      to right,
+      rgba(159, 18, 57, 0.8),
+      rgba(225, 29, 72, 0.8)
+    ),
+    url(../img/man-packing-box-files-fr.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+.hero-buttons {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.hero-buttons .btn-hero {
+  background-color: transparent;
+  box-shadow: 0 0 0 0.2rem #fff;
 }
 
 /* ABOUT */
+#about {
+  padding: 4rem 0;
+}
+
 .about-button {
   display: flex;
   justify-content: center;
@@ -98,10 +121,6 @@ body {
 .about-text p {
   font-size: 1.6rem;
   line-height: 1.6;
-}
-
-.about-icon {
-  margin-left: 0.4rem;
 }
 
 /* SERVICES */

@@ -1,0 +1,64 @@
+.slider {
+  position: relative;
+  height: 45rem;
+  max-width: 122rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  padding: 0 2rem;
+  transition: all 0.8s ease;
+}
+
+.slider-title {
+  font-size: 3.2rem;
+  margin-bottom: 0.4rem;
+  text-transform: capitalize;
+}
+
+.slider-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  max-width: 70rem;
+}
+
+.dots {
+  /* position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%); */
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1.4rem;
+}
+
+.dots-dot {
+  border: none;
+  background-color: #fff;
+  /* box-shadow: 0 0 0 2px #fff; */
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots-dot:last-child {
+  margin: 0;
+}
+
+.dots-dot--active {
+  background-color: var(--primary-color);
+  opacity: 1;
+}

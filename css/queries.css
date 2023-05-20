@@ -74,6 +74,14 @@
     flex-direction: column-reverse;
   }
 
+  .slider-title {
+    font-size: 2.8rem;
+  }
+
+  .slider-text {
+    font-size: 1.6rem;
+  }
+
   .col-2 {
     grid-template-columns: 1fr;
   }
