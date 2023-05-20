@@ -14,6 +14,8 @@ const closeModal = document.querySelector('.close-modal');
 const locationContainer = document.querySelector('#location');
 const slides = document.querySelectorAll('.slide');
 const dotContainer = document.querySelector('.dots');
+const header = document.getElementById('header');
+const btnUp = document.querySelector('.btn-up');
 
 // Get all countries in the world
 const searchCountries = async function () {
@@ -108,7 +110,20 @@ const fixedNavigation = function () {
   else nav.classList.remove('fixed');
 };
 
-window.addEventListener('scroll', fixedNavigation);
+// Back to top link
+const backToTop = function () {
+  const scrollHeight = window.scrollY;
+  const headerHeight = header.getBoundingClientRect().height;
+  const navHeight = nav.getBoundingClientRect().height;
+
+  if (scrollHeight > headerHeight - navHeight - 10) btnUp.style.opacity = 1;
+  else btnUp.style.opacity = 0;
+};
+
+window.addEventListener('scroll', function (e) {
+  fixedNavigation();
+  backToTop();
+});
 
 // Smooth scroll
 scrollLink.forEach(function (link, i, arr) {
@@ -217,7 +232,7 @@ const sliderComponent = function () {
     }
   });
 
-  setInterval(nextSlide, 8000);
+  setInterval(nextSlide, 10000);
 };
 
 sliderComponent();
