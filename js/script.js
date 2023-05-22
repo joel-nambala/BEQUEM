@@ -21,7 +21,9 @@ const btnUp = document.querySelector('.btn-up');
 const searchCountries = async function () {
   try {
     // Get the countries data from an API
-    const response = await fetch('https://restcountries.com/v3.1/all');
+    const response = await fetch(
+      'https://api.codetabs.com/v1/proxy/?questhttps://restcountries.com/v3.1/all'
+    );
 
     // Throw an exception
     if (!response.ok) throw new Error('Failed to fetch countries');
