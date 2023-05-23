@@ -70,6 +70,12 @@ body {
   right: 2.6rem;
 }
 
+.nav-logo {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+
 .hero {
   background-image: linear-gradient(
       to right,
