@@ -24,9 +24,7 @@ const crossOrigin = 'https://api.codetabs.com/v1/proxy/?quest=';
 const searchCountries = async function () {
   try {
     // Get the countries data from an API
-    const response = await fetch(
-      `${crossOrigin}https://restcountries.com/v3.1/all`
-    );
+    const response = await fetch(`https://restcountries.com/v3.1/all`);
 
     // Throw an exception
     if (!response.ok) throw new Error('Failed to fetch countries');
