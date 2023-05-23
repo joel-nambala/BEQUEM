@@ -24,7 +24,7 @@ const crossOrigin = 'https://api.codetabs.com/v1/proxy/?quest=';
 const searchCountries = async function () {
   try {
     // Get the countries data from an API
-    const response = await fetch(`https://restcountries.com/v3.1/all`);
+    const response = await fetch('locations.json');
 
     // Throw an exception
     if (!response.ok) throw new Error('Failed to fetch countries');
@@ -34,10 +34,9 @@ const searchCountries = async function () {
 
     // Initialize the locations array
     const locations = [];
-
     // Loop over the countries data and push the names to the location array
-    data.forEach(function (country, i, arr) {
-      locations.push(country.name.common);
+    data.countries.forEach(function (country, i, arr) {
+      locations.push(country);
     });
 
     // Sort the locations alphabetically
