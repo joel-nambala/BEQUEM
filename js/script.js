@@ -311,7 +311,7 @@ const sendEmail = function (e) {
       successAlert('Email send succesifully');
 
       // Hide modal
-      hideModal();
+      setInterval(hideModal, 1600);
     })
     .catch(error => console.log(error));
 };
