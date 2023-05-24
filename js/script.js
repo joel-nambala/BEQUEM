@@ -76,6 +76,27 @@ const changeCopyrightYear = function () {
 };
 changeCopyrightYear();
 
+// Alerts
+const successAlert = function (msg) {
+  Swal.fire({
+    icon: 'success',
+    title: 'Success',
+    text: `${msg}`,
+    timer: 1500,
+    showConfirmButton: false,
+  });
+};
+
+const errorAlert = function (msg) {
+  Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: `${msg}`,
+    timer: 1500,
+    showConfirmButton: false,
+  });
+};
+
 // Show modal
 const showModal = function (e) {
   e.preventDefault();
@@ -282,16 +303,15 @@ const sendEmail = function (e) {
     .send(serviceID, templateID, params)
     .then(res => {
       console.log(res);
-      alert('Email send succesifully');
       // Empty the elements
-      contactFirstName =
-        contactLastName =
-        contactPhone =
-        contactCompany =
-        contactLocation =
-        contactMessage =
-        contactSubject =
-          '';
+      // prettier-ignore
+      contactFirstName.value = contactLastName.value = contactPhone.value = contactCompany.value = contactLocation.value = contactMessage.value = contactSubject.value = contactEmail.value = '';
+
+      // Alert
+      successAlert('Email send succesifully');
+
+      // Hide modal
+      hideModal();
     })
     .catch(error => console.log(error));
 };
