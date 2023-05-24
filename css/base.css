@@ -115,3 +115,23 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
+
+.error-email {
+  font-size: 1.2rem;
+}
+
+.success {
+  color: #14a44d;
+}
+
+.error {
+  color: #dc4c64;
+}
+
+.b-success {
+  outline: 1px solid #14a44d;
+}
+
+.b-error {
+  outline: 1px solid #dc4c64;
+}

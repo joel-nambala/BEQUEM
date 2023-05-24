@@ -25,9 +25,11 @@ const contactCompany = document.querySelector('.contact-company');
 const contactLocation = document.querySelector('.contact-location');
 const contactMessage = document.querySelector('.contact-message');
 const contactSubject = document.querySelector('.contact-subject');
+const contactEmailError = document.querySelector('.error-email');
 
 // State variables
 const crossOrigin = 'https://api.codetabs.com/v1/proxy/?quest=';
+const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 // Get all countries in the world
 const searchCountries = async function () {
@@ -269,11 +271,40 @@ const sliderComponent = function () {
 
 sliderComponent();
 
-(function () {
-  emailjs.init('V9AweIpA2_llmRLsi');
-})();
+// Email validator
+const validateEmail = function (email) {
+  if (email.match(emailRegex)) {
+    contactEmailError.textContent = 'Valid email address';
+    contactEmailError.classList.remove('success');
+    contactEmailError.classList.remove('error');
+    contactEmailError.classList.add('success');
+
+    contactEmail.classList.remove('b-success');
+    contactEmail.classList.remove('b-error');
+    contactEmail.classList.add('b-success');
+  } else {
+    contactEmailError.textContent = 'Invalid email address';
+    contactEmailError.classList.remove('success');
+    contactEmailError.classList.remove('error');
+    contactEmailError.classList.add('error');
+
+    contactEmail.classList.remove('b-success');
+    contactEmail.classList.remove('b-error');
+    contactEmail.classList.add('b-error');
+  }
+};
+
+contactEmail.addEventListener('keyup', function (e) {
+  validateEmail(contactEmail.value);
+});
 
 const sendEmail = function (e) {
+  // Initi email.js
+  (function () {
+    emailjs.init('V9AweIpA2_llmRLsi');
+  })();
+
+  // Get the values
   const senderEmail = contactEmail.value;
   const senderSubject = contactSubject.value;
   const senderMessage = contactMessage.value;
