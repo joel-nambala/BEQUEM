@@ -21,6 +21,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="shortcut icon" href="./img/logo.png" type="image/png" />
+    <script
+      defer
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
 
     <!-- Local files -->
     <link rel="stylesheet" href="css/style.css" />
@@ -400,7 +405,7 @@
           <input
             type="text"
             placeholder="First Name"
-            class="form-control"
+            class="form-control contact-first-name"
             required
           />
         </div>
@@ -408,7 +413,7 @@
           <input
             type="text"
             placeholder="Last Name"
-            class="form-control"
+            class="form-control contact-last-name"
             required
           />
         </div>
@@ -416,7 +421,7 @@
           <input
             type="email"
             placeholder="Email Name"
-            class="form-control"
+            class="form-control contact-email"
             required
           />
         </div>
@@ -424,7 +429,7 @@
           <input
             type="number"
             placeholder="Phone Number"
-            class="form-control"
+            class="form-control contact-phone"
             required
           />
         </div>
@@ -432,20 +437,25 @@
           <input
             type="text"
             placeholder="Company"
-            class="form-control"
+            class="form-control contact-company"
             required
           />
         </div>
         <div class="contact-group">
-          <select name="location" id="location" class="form-control" required>
-            <option value="" disabled>---Select location---</option>
+          <select
+            name="location"
+            id="location"
+            class="form-control contact-location"
+            required
+          >
+            <option value="" disabled>---select location---</option>
           </select>
         </div>
         <div class="contact-group">
           <input
             type="text"
             placeholder="Subject"
-            class="form-control"
+            class="form-control contact-subject"
             required
           />
         </div>
@@ -454,7 +464,7 @@
         <textarea
           name="textarea"
           id="textarea"
-          class="form-control"
+          class="form-control contact-message"
           rows="8"
           placeholder="Type your message here..."
           required

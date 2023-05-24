@@ -16,6 +16,15 @@ const slides = document.querySelectorAll('.slide');
 const dotContainer = document.querySelector('.dots');
 const header = document.getElementById('header');
 const btnUp = document.querySelector('.btn-up');
+const contactForm = document.querySelector('.contact-form');
+const contactFirstName = document.querySelector('.contact-first-name');
+const contactLastName = document.querySelector('.contact-last-name');
+const contactEmail = document.querySelector('.contact-email');
+const contactPhone = document.querySelector('.contact-phone');
+const contactCompany = document.querySelector('.contact-company');
+const contactLocation = document.querySelector('.contact-location');
+const contactMessage = document.querySelector('.contact-message');
+const contactSubject = document.querySelector('.contact-subject');
 
 // State variables
 const crossOrigin = 'https://api.codetabs.com/v1/proxy/?quest=';
@@ -238,3 +247,53 @@ const sliderComponent = function () {
 };
 
 sliderComponent();
+
+(function () {
+  emailjs.init('V9AweIpA2_llmRLsi');
+})();
+
+const sendEmail = function (e) {
+  const senderEmail = contactEmail.value;
+  const senderSubject = contactSubject.value;
+  const senderMessage = contactMessage.value;
+  const senderName = contactFirstName.value;
+  const senderName1 = contactLastName.value;
+  const senderPhone = contactPhone.value;
+  const senderLocation = contactLocation.value;
+  const senderCompany = contactCompany.value;
+
+  e.preventDefault();
+
+  // Send email
+  const serviceID = 'service_evqqaj6';
+  const templateID = 'template_5952u0u';
+
+  const params = {
+    name: `${senderName} ${senderName1}`,
+    email: senderEmail,
+    message: senderMessage,
+    subject: senderSubject,
+    phone: senderPhone,
+    locale: senderLocation,
+    company: senderCompany,
+  };
+
+  emailjs
+    .send(serviceID, templateID, params)
+    .then(res => {
+      console.log(res);
+      alert('Email send succesifully');
+      // Empty the elements
+      contactFirstName =
+        contactLastName =
+        contactPhone =
+        contactCompany =
+        contactLocation =
+        contactMessage =
+        contactSubject =
+          '';
+    })
+    .catch(error => console.log(error));
+};
+
+contactForm.addEventListener('submit', sendEmail);
