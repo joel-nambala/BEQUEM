@@ -238,6 +238,12 @@ body {
   text-transform: capitalize !important;
 }
 
+/* CLIENTS */
+#clients {
+  background-color: #fff;
+  padding: 3rem 0;
+}
+
 /* FOOTER */
 .footer {
   background-color: #57534e;
