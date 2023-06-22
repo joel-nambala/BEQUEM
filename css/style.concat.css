@@ -70,6 +70,12 @@ body {
   right: 2.6rem;
 }
 
+.nav-logo {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+}
+
 .hero {
   background-image: linear-gradient(
       to right,
@@ -230,6 +236,12 @@ body {
 
 .btn-news {
   text-transform: capitalize !important;
+}
+
+/* CLIENTS */
+#clients {
+  background-color: #fff;
+  padding: 3rem 0;
 }
 
 /* FOOTER */
@@ -473,6 +485,26 @@ body {
 .col-sm {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+}
+
+.error-email {
+  font-size: 1.2rem;
+}
+
+.success {
+  color: #14a44d;
+}
+
+.error {
+  color: #dc4c64;
+}
+
+.b-success {
+  outline: 1px solid #14a44d;
+}
+
+.b-error {
+  outline: 1px solid #dc4c64;
 }
 
 .slider {
